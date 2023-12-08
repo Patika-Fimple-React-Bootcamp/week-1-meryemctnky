@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
+    <title>Todo List</title>
+  </head>
+  <body>
+    <main>
+      <section class="left-side">
+        <img src="assets/checklist.png" alt="checklist" width="200" />
+        <h5>Add to daily to-do list</h5>
+        <p>Enter a task title, check the box when done, and submit. View your tasks on the right.</p>
+        <form>
+          <input type="text" name="title" id="title" />
+          <div id="error">Please enter any todo</div>
+          <div class="check">
+            <input type="checkbox" name="completed" id="completed" />
+            <label for="completed" id="completedLabel"><i class="fa fa-square-o"></i><span>I have completed</span></label>
+          </div>
+          <button type="submit" id="submit">Submit</button>
+        </form>
+      </section>
+      <section class="right-side">
+        <h5>TODOS</h5>
+        <div class="loading">
+          <div id="spinner" class="spinner"></div>
+          <span id="loadingText" class="visually-hidden">Loading...</span>
+        </div>
+        <ul id="todoList"></ul>
+      </section>
+    </main>
+  </body>
+</html>
